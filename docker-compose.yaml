@@ -31,6 +31,7 @@ services:
     container_name: fluent-bit
     volumes:
       - ./fluent-bit/fluent-bit.conf:/fluent-bit/etc/fluent-bit.conf
+      - ./fluent-bit/parsers.conf:/fluent-bit/etc/parsers.conf
       - /var/lib/docker/containers:/var/lib/docker/containers:ro
     depends_on:
       - elasticsearch
